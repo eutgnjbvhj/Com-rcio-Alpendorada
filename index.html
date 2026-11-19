@@ -103,13 +103,7 @@ function termos(){LG('Termos de Adesão',`<p class="m">Atualizados em novembro d
 <h3>9. Responsabilidade</h3><p>A informação das páginas é fornecida pelos próprios estabelecimentos. O prestador não garante que o site esteja sempre disponível.</p>
 <h3>10. Reclamações</h3><p>Pode contactar-nos pelos contactos acima. Aplica-se a lei portuguesa.</p><h3>11. Avaliações</h3><p>O site não publica avaliações nem testemunhos. Se vier a publicar, serão sempre autênticos, de clientes reais, e nunca pagos nem alterados.</p>`)}
 function autorizacao(){app.innerHTML=`<article class="box lg"><h2 style="margin-top:0">Autorização de publicação</h2>
-<p>Eu, ______________________________________, na qualidade de proprietário(a) ou representante do estabelecimento ______________________________________ (NIF ______________), autorizo o Comércio Alpendorada, da responsabilidade de Tiago Gonçalves, a publicar no site o nome, a categoria, a descrição, a morada, o telefone, o e-mail, o horário, as redes sociais, o logótipo e as fotografias do estabelecimento.</p>
-<p>Confirmo que tenho o direito de usar as imagens e os textos fornecidos. Posso retirar esta autorização a qualquer momento, por pedido, e os dados são então removidos do site. O tratamento dos dados segue a Política de Privacidade do site.</p>
-<p><b>Plano escolhido:</b> &#9744; Adesão anual (20 €) &nbsp; &#9744; Destaque (10 €/mês) &nbsp; &#9744; Destaque (20 €/3 meses)</p>
-<p style="margin-top:28px">Data: ____ / ____ / ________</p>
-<p style="margin-top:34px">Assinatura do estabelecimento: ______________________________</p>
-<p style="margin-top:34px">Assinatura de Tiago Gonçalves: ______________________________</p>
-<button class="btn noprint" style="margin-top:18px" onclick="window.print()">Imprimir</button></article>`}
+</button></article>`}
 document.addEventListener('click',e=>{if(e.target.closest('.skip')){e.preventDefault();document.getElementById('app').focus()}});
 function visita(id){try{if(location.origin!=='https://comercioalpendorada.eutgd0py.workers.dev'||!navigator.sendBeacon)return;var k='ca_v_'+id,t=Date.now(),u=0;try{u=+localStorage.getItem(k)||0}catch(e){}if(t-u<1800000)return;try{localStorage.setItem(k,String(t))}catch(e){}navigator.sendBeacon('https://ca-api.eutgd0py.workers.dev/v',new Blob([JSON.stringify({l:id})],{type:'text/plain'}))}catch(e){}}
 const rank=s=>({premium:2,destaque:1}[s.plan]||0)+(s.featured?3:0);
