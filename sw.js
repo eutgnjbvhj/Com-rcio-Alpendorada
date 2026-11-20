@@ -2,8 +2,8 @@
    - Páginas e ficheiros do site: vai sempre buscar a versão mais recente à rede (quando há Internet)
      e guarda uma cópia; sem Internet usa a última cópia guardada.
    - Só guarda pedidos GET do próprio site. Nunca guarda dados do CRM nem do painel de administração. */
-const V = 'ca-2026-11-18-1';
-const PRE = ['./', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png'];
+const V = 'ca-2026-11-20-1';
+const PRE = ['./', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png', 'icons/splash.jpg'];
 
 self.addEventListener('install', e => {
   e.waitUntil(
